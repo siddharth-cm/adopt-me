@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Router, Link } from "@reach/router";
-import Results from "./Results";
-import Details from "./Details";
-import SearchParams from "./SearchParams";
+import Results from "./components/Results";
+import Details from "./components/Details";
+import SearchParams from "./components/SearchParams";
 import { Provider } from "react-redux";
 import store from "./store";
 

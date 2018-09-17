@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import getBreeds from "./reducers/getBreeds";
-import changeLocation from "./actionCreators/changeLocation";
-import changeAnimal from "./actionCreators/changeAnimal";
-import changeBreed from "./actionCreators/changeBreed";
+import getBreeds from "../reducers/getBreeds";
+import changeLocation from "../actionCreators/changeLocation";
+import changeAnimal from "../actionCreators/changeAnimal";
+import changeBreed from "../actionCreators/changeBreed";
 import { ANIMALS } from "petfinder-client";
 
 class SearchBox extends Component {
