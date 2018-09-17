@@ -24619,7 +24619,7 @@ function getBreeds() {
     });
   };
 }
-},{"petfinder-client":"../../node_modules/petfinder-client/index.js"}],"../actionCreators/changeLocation.js":[function(require,module,exports) {
+},{"petfinder-client":"../../node_modules/petfinder-client/index.js"}],"../actions/changeLocation.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24629,7 +24629,7 @@ exports.default = changeLocation;
 function changeLocation(location) {
   return { type: "CHANGE_LOCATION", payload: location };
 }
-},{}],"../actionCreators/changeAnimal.js":[function(require,module,exports) {
+},{}],"../actions/changeAnimal.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24639,7 +24639,7 @@ exports.default = changeAnimal;
 function changeAnimal(animal) {
   return { type: "CHANGE_ANIMAL", payload: animal };
 }
-},{}],"../actionCreators/changeBreed.js":[function(require,module,exports) {
+},{}],"../actions/changeBreed.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24668,15 +24668,15 @@ var _getBreeds = require("../reducers/getBreeds");
 
 var _getBreeds2 = _interopRequireDefault(_getBreeds);
 
-var _changeLocation = require("../actionCreators/changeLocation");
+var _changeLocation = require("../actions/changeLocation");
 
 var _changeLocation2 = _interopRequireDefault(_changeLocation);
 
-var _changeAnimal = require("../actionCreators/changeAnimal");
+var _changeAnimal = require("../actions/changeAnimal");
 
 var _changeAnimal2 = _interopRequireDefault(_changeAnimal);
 
-var _changeBreed = require("../actionCreators/changeBreed");
+var _changeBreed = require("../actions/changeBreed");
 
 var _changeBreed2 = _interopRequireDefault(_changeBreed);
 
@@ -24805,7 +24805,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(SearchBox);
-},{"react":"../../node_modules/react/index.js","react-redux":"../../node_modules/react-redux/es/index.js","../reducers/getBreeds":"../reducers/getBreeds.js","../actionCreators/changeLocation":"../actionCreators/changeLocation.js","../actionCreators/changeAnimal":"../actionCreators/changeAnimal.js","../actionCreators/changeBreed":"../actionCreators/changeBreed.js","petfinder-client":"../../node_modules/petfinder-client/index.js"}],"../components/Results.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-redux":"../../node_modules/react-redux/es/index.js","../reducers/getBreeds":"../reducers/getBreeds.js","../actions/changeLocation":"../actions/changeLocation.js","../actions/changeAnimal":"../actions/changeAnimal.js","../actions/changeBreed":"../actions/changeBreed.js","petfinder-client":"../../node_modules/petfinder-client/index.js"}],"../components/Results.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25609,7 +25609,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60372' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61609' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
