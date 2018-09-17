@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Router, Link } from "@reach/router";
 import Results from "./Results";
 import Details from "./Details";

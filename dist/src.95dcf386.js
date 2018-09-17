@@ -24585,7 +24585,7 @@ exports.Provider = _Provider2.default;
 exports.createProvider = _Provider.createProvider;
 exports.connectAdvanced = _connectAdvanced2.default;
 exports.connect = _connect2.default;
-},{"./components/Provider":"../node_modules/react-redux/es/components/Provider.js","./components/connectAdvanced":"../node_modules/react-redux/es/components/connectAdvanced.js","./connect/connect":"../node_modules/react-redux/es/connect/connect.js"}],"getBreeds.js":[function(require,module,exports) {
+},{"./components/Provider":"../node_modules/react-redux/es/components/Provider.js","./components/connectAdvanced":"../node_modules/react-redux/es/components/connectAdvanced.js","./connect/connect":"../node_modules/react-redux/es/connect/connect.js"}],"reducers/getBreeds.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24619,7 +24619,7 @@ function getBreeds() {
     });
   };
 }
-},{"petfinder-client":"../node_modules/petfinder-client/index.js"}],"changeLocation.js":[function(require,module,exports) {
+},{"petfinder-client":"../node_modules/petfinder-client/index.js"}],"actionCreators/changeLocation.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24629,7 +24629,7 @@ exports.default = changeLocation;
 function changeLocation(location) {
   return { type: "CHANGE_LOCATION", payload: location };
 }
-},{}],"changeAnimal.js":[function(require,module,exports) {
+},{}],"actionCreators/changeAnimal.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24639,7 +24639,7 @@ exports.default = changeAnimal;
 function changeAnimal(animal) {
   return { type: "CHANGE_ANIMAL", payload: animal };
 }
-},{}],"changeBreed.js":[function(require,module,exports) {
+},{}],"actionCreators/changeBreed.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24664,19 +24664,19 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = require("react-redux");
 
-var _getBreeds = require("./getBreeds");
+var _getBreeds = require("./reducers/getBreeds");
 
 var _getBreeds2 = _interopRequireDefault(_getBreeds);
 
-var _changeLocation = require("./changeLocation");
+var _changeLocation = require("./actionCreators/changeLocation");
 
 var _changeLocation2 = _interopRequireDefault(_changeLocation);
 
-var _changeAnimal = require("./changeAnimal");
+var _changeAnimal = require("./actionCreators/changeAnimal");
 
 var _changeAnimal2 = _interopRequireDefault(_changeAnimal);
 
-var _changeBreed = require("./changeBreed");
+var _changeBreed = require("./actionCreators/changeBreed");
 
 var _changeBreed2 = _interopRequireDefault(_changeBreed);
 
@@ -24805,7 +24805,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(SearchBox);
-},{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","./getBreeds":"getBreeds.js","./changeLocation":"changeLocation.js","./changeAnimal":"changeAnimal.js","./changeBreed":"changeBreed.js","petfinder-client":"../node_modules/petfinder-client/index.js"}],"Results.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-redux":"../node_modules/react-redux/es/index.js","./reducers/getBreeds":"reducers/getBreeds.js","./actionCreators/changeLocation":"actionCreators/changeLocation.js","./actionCreators/changeAnimal":"actionCreators/changeAnimal.js","./actionCreators/changeBreed":"actionCreators/changeBreed.js","petfinder-client":"../node_modules/petfinder-client/index.js"}],"Results.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25334,7 +25334,7 @@ var thunk = createThunkMiddleware();
 thunk.withExtraArgument = createThunkMiddleware;
 
 exports.default = thunk;
-},{}],"location.js":[function(require,module,exports) {
+},{}],"reducers/location.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25352,7 +25352,7 @@ function location() {
       return state;
   }
 }
-},{}],"animal.js":[function(require,module,exports) {
+},{}],"reducers/animal.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25370,7 +25370,7 @@ function animal() {
       return state;
   }
 }
-},{}],"breeds.js":[function(require,module,exports) {
+},{}],"reducers/breeds.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25388,7 +25388,7 @@ function breeds() {
       return state;
   }
 }
-},{}],"breed.js":[function(require,module,exports) {
+},{}],"reducers/breed.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25408,7 +25408,7 @@ function breed() {
       return state;
   }
 }
-},{}],"reducers.js":[function(require,module,exports) {
+},{}],"reducers/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25441,7 +25441,7 @@ exports.default = (0, _redux.combineReducers)({
   breeds: _breeds2.default,
   breed: _breed2.default
 });
-},{"redux":"../node_modules/redux/es/redux.js","./location":"location.js","./animal":"animal.js","./breeds":"breeds.js","./breed":"breed.js"}],"store.js":[function(require,module,exports) {
+},{"redux":"../node_modules/redux/es/redux.js","./location":"reducers/location.js","./animal":"reducers/animal.js","./breeds":"reducers/breeds.js","./breed":"reducers/breed.js"}],"store/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25456,7 +25456,7 @@ var _reduxThunk = require("redux-thunk");
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _reducers = require("./reducers");
+var _reducers = require("../reducers");
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -25467,7 +25467,7 @@ var store = (0, _redux.createStore)(_reducers2.default, (0, _redux.compose)((0, 
 }));
 
 exports.default = store;
-},{"redux":"../node_modules/redux/es/redux.js","redux-thunk":"../node_modules/redux-thunk/es/index.js","./reducers":"reducers.js"}],"App.js":[function(require,module,exports) {
+},{"redux":"../node_modules/redux/es/redux.js","redux-thunk":"../node_modules/redux-thunk/es/index.js","../reducers":"reducers/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25560,7 +25560,7 @@ var App = function (_Component) {
 }(_react.Component);
 
 exports.default = App;
-},{"react":"../node_modules/react/index.js","@reach/router":"../node_modules/@reach/router/es/index.js","./Results":"Results.js","./Details":"Details.js","./SearchParams":"SearchParams.js","react-redux":"../node_modules/react-redux/es/index.js","./store":"store.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@reach/router":"../node_modules/@reach/router/es/index.js","./Results":"Results.js","./Details":"Details.js","./SearchParams":"SearchParams.js","react-redux":"../node_modules/react-redux/es/index.js","./store":"store/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = require("react");
@@ -25609,7 +25609,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '63878' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '57907' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
